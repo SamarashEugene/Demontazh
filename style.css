@@ -1797,7 +1797,7 @@ button {
     transform: translate(-50%, -50%) scale(0);
     width: 8px;
     height: 8px;
-    background-color: 232324;
+    background-color: #222222;
     border-radius: 100%;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -1846,7 +1846,7 @@ button {
 
 .customRadio_radio:checked ~ .customRadio_label .customRadio_label-cirkle,
 .customRadio_radio:checked ~ .customRadio_label .checkbox-item {
-    background-color: #d1ffcf;
+    background-color: #F3F4F5;
     border: none;
     -webkit-box-shadow: inset 0px 3px 15px 2px rgba(0, 0, 0, 0.13);
     box-shadow: inset 0px 3px 15px 2px rgba(0, 0, 0, 0.13);

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/ico-moon/style.css">
     <link rel="stylesheet" href="css/slick.css">
-<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">-->
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">-->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -148,13 +148,13 @@
             <div class="test-item__content form-before">
                 <div class="test-item__header">
                     <h2 class="section-title section-title--black">Прорахуйте попередню вартість та час виконання.</h2>
-                    <p class="test-item__desc">Дайте відповідь на 6 запитань та отримайте прораховану вартість демонтажу
+                    <p class="test-item__desc">Дайте відповідь на 5 запитань та отримайте прораховану вартість демонтажу
                         вашого приміщення.</p>
 
                     <div class="test-item__progress">
                         <div class="test-item__number">
-                            <span class="test-item__number-furst">01</span>
-                            <span class="test-item__number-all">/ 07</span>
+                            <span class="test-item__number-furst" id="countStep">1</span>
+                            <span class="test-item__number-all">/ 5</span>
                             <span class="test-item__number-text">Майже готово!</span>
                         </div>
 
@@ -169,27 +169,27 @@
                             <div class="test-circle test-circle-1 test-circle-active">
                             </div>
 
-                            <div class="test-block test-block-1">
+                            <div class="test-block test-block-1" id="test-block-1">
                             </div>
 
-                            <div class="test-circle test-circle-2">
+                            <div class="test-circle test-circle-2" id="test-circle-2">
                             </div>
 
-                            <div class="test-block test-block-2">
+                            <div class="test-block test-block-2" id="test-block-2">
                             </div>
 
-                            <div class="test-circle test-circle-3">
+                            <div class="test-circle test-circle-3" id="test-circle-3">
                             </div>
 
-                            <div class="test-block test-block-3">
+                            <div class="test-block test-block-3" id="test-block-3">
                             </div>
 
-                            <div class="test-circle test-circle-4">
+                            <div class="test-circle test-circle-4" id="test-circle-4">
                             </div>
-                            <div class="test-block test-block-4">
+                            <div class="test-block test-block-4" id="test-block-4">
                             </div>
 
-                            <div class="test-circle test-circle-5">
+                            <div class="test-circle test-circle-5" id="test-circle-5">
                             </div>
 
 
@@ -201,7 +201,7 @@
                 <div class="test__content">
 
                     <div class="test-slider__wrap" style="margin-right: auto;margin-left: auto;">
-                        <form action="thanks.php" id="testForm" class="test-form" method="POST">
+                        <form action="" id="testForm" class="test-form" method="">
                             <input type="hidden" name="formname" value="test">
 
                             <div class="test-slider">
@@ -218,7 +218,7 @@
                                                    </span>
                                             </label>
 
-                                            <input type="radio" name="nertype" class="customRadio_radio"
+                                            <input type="radio" checked name="nertype" class="customRadio_radio"
                                                    id="nertype-1" value="Жила нерухомість">
 
                                             <label for="nertype-1" class="customRadio_label">
@@ -250,73 +250,8 @@
 
                                 </div>
 
-                                <div id="stepTwo" onclick="nextOne()"  class="test-slider__item ner-block-1" style="display: none;">
-                                    <h3 class="test-slider-title" style='width: 100%;text-align: center;'>Виберіть тип
-                                        вашого об'єкта</h3>
-                                    <div class="test-slider__content" style="padding: 0;border: 0;">
 
-                                        <div class="test-slider__elem-min skipEl" style="margin-bottom: 15px;">
-                                            <label for="ques2-1">
-                                                   <span class="customRadio__img"
-                                                         style="background: url(https://lh3.googleusercontent.com/proxy/hUy57ZBr4DfUM5tkFBJy0iFZzdX9mnoEE_wTtkH11v-S2z30iKzij7hYe0SwiMEQNfIFMogRmp_I2u8s2TjHGv4f7MQ5V9mQC_weT-JcYimwySiUHQw8co0gC2X9LJP4CNACY_sFmi5yIzTigq5VFB1z0DSHpH7LieQfP35PTpH2alLd9FtSJYnvbx_7DjpZ0b26-E7A2kACdxlW09s7Q0h8U1BE9tbeUEyTAp2TH6Ox3yjqhvPdMJpn3RRFmkpDZNx5aTj32piEoxNb19oQcG3p7xwYv9CEoIp1hTK52t_fHXKVMmdbzCcL-l0XWcGSTE8WpD2yqZpvdavM) no-repeat center; background-size: cover;">
-                                                   </span>
-                                            </label>
-
-                                            <input type="radio" name="ques2" class="customRadio_radio"
-                                                   id="ques2-1" value="Вторинний будинок">
-
-                                            <label for="ques2-1" class="customRadio_label">
-                                                   <span class="customRadio_label-cirkle">
-                                                   </span>
-                                                <span>Вторинний будинок</span>
-                                            </label>
-                                        </div>
-
-                                        <div class="test-slider__elem-min skipEl" style="margin-bottom: 15px;">
-                                            <label for="ques2-2">
-                                                   <span class="customRadio__img"
-                                                         style="background: url(https://agam.kiev.ua/images/image4068579681500906881.jpg) no-repeat center; background-size: cover;">
-                                                   </span>
-                                            </label>
-
-                                            <input type="radio" name="ques2" class="customRadio_radio"
-                                                   id="ques2-2" value="В новобудові">
-
-                                            <label for="ques2-2" class="customRadio_label">
-                                                   <span class="customRadio_label-cirkle">
-                                                   </span>
-                                                <span>В новобудові</span>
-                                            </label>
-                                        </div>
-
-                                        <div class="test-slider__elem-min skipEl" style="margin-bottom: 15px;">
-                                            <label for="ques2-3">
-                                                   <span class="customRadio__img"
-                                                         style="background: url(https://img.lunstatic.net/building-1600x1200/45264.jpg) no-repeat center; background-size: cover;">
-                                                   </span>
-                                            </label>
-
-                                            <input type="radio" name="ques2" class="customRadio_radio"
-                                                   id="ques2-3" value="Котедж">
-
-                                            <label for="ques2-3" class="customRadio_label">
-                                                   <span class="customRadio_label-cirkle">
-                                                   </span>
-                                                <span>Котедж</span>
-                                            </label>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- <div class="btn--wrap">
-                                        <button class="btn-test next-test">
-                                            <span>Далее</span>
-                                        </button>
-                                    </div> -->
-
-                                </div>
-
-                                <div id="stepThree" onclick="nextTwo()" class="test-slider__item" style="display: none;">
+                                <div id="stepTwo" class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title test-slider-title-m">
                                         Укажіть орієнтовну площу</h3>
 
@@ -350,7 +285,7 @@
 
                                 </div>
 
-                                <div id="stepFour" onclick="nextThree()" class="test-slider__item" style="display: none;">
+                                <div id="stepThree" class="test-slider__item" style="display: none;">
                                     <span class="question question-test" style="display: none;">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                              xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="20"
@@ -422,7 +357,7 @@
 
                                 </div>
 
-                                <div id="stepFive" onclick="nextFour()" class="test-slider__item" style="display: none;">
+                                <div id="stepFour" class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title">
                                         Як швидко потрібно приступити до роботи?</h3>
                                     <div class="test-slider__content" style="border: 2px solid #ededed;">
@@ -486,7 +421,7 @@
 
                                 </div>
 
-                                <div id="stepSix" onclick="finish()" class="test-slider__item" style="display: none;">
+                                <div id="stepFive" class="test-slider__item" style="display: none;">
                                     <div class="test-slider__item-end">
                                         <div class="test-slider__item-end_inner" style="margin: 0 auto;">
                                             <p class="test-slider__item-end__complete">
@@ -516,17 +451,19 @@
                                 </div>
                             </div>
 
-                            <div class="text-subbtn" id="hide-btn">
-                                Виберіть варіант відповіді або введіть значення
-                            </div>
-                            <div class="btn--wrap test__btn-block" id="hide-btn1">
-                                <button class=" btn-test prev-test" onclick="prev()">
-                                    <span>Назад</span>
-                                </button>
-                                <button class="btn-test next-test" onclick="next()" id="nextStep">
-                                    <span>Далі</span>
+                            <div id="btnHide">
+                                <div class="text-subbtn" id="hide-btn">
+                                    Виберіть варіант відповіді
+                                </div>
+                                <div class="btn--wrap test__btn-block" id="hide-btn1">
+                                    <button class=" btn-test prev-test" onclick="prev()" id="prevStep">
+                                        <span>Назад</span>
+                                    </button>
+                                    <button class="btn-test next-test" onclick="next()" id="nextStep">
+                                        <span>Далі</span>
 
-                                </button>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
