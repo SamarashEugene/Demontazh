@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/ico-moon/style.css">
     <link rel="stylesheet" href="css/slick.css">
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -105,7 +107,7 @@
                                 <a href="tel:+380666054488">+380 67 404 46-42</a>
                             </div>
                         </div>
-                        <p class="contacts-phone__recall consult">
+                        <p class="contacts-phone__recall consult" onclick="showForm()">
                             Перетелефонуйте мені
                         </p>
                     </div>
@@ -132,10 +134,11 @@
                         Поетапна оплата</p>
                 </div>
             </div>
-            <div class="btn-main-wrap">
-                <button class="btn btn-main test-scroll">
-                    <span><i class="fas fa-calculator"></i></span>Калькулятор вартості
-                </button>
+            <div class="btn-main-wrap ">
+                    <button class="btn btn-main test-scroll" onclick="go()" id="btn-link" href="#calc">
+                        <span><i class="fas fa-calculator"></i></span>Калькулятор вартості
+                    </button>
+
             </div>
         </div>
     </div>
@@ -144,7 +147,7 @@
     <div class="test">
 
 
-        <div class="container">
+        <div class="container" id="calc">
             <div class="test-item__content form-before">
                 <div class="test-item__header">
                     <h2 class="section-title section-title--black">Прорахуйте попередню вартість та час виконання.</h2>
@@ -268,16 +271,15 @@
                                             <div class="send-result-polzunok_wrap">
                                                 <label for="send-result-polzunok">м<sup>2</sup></label>
                                                 <input type="text" name="send-result-polzunok" id="send-result-polzunok"
-                                                       class="input-test"></div>
-                                            <div id="number-slider"></div>
+                                                       class="input-test" value=""
+                                                       onkeyup="this.value = this.value.replace(/[^\d]/g,'');"></div>
 
-                                            <div class="test-slider__input">
-                                                <input type="checkbox" name="no" class="customRadio_radio" id="no">
-                                                <label for="no" class="customRadio_label customRadio_label-check">
-                                                    <span class="checkbox-item"></span>
-                                                    <span>Не пам'ятаю</span>
-                                                </label>
+                                            <div class="slidecontainer-tick">
+                                                <input type="range" min="1" max="300" value="50" class="slider-tick"
+                                                       id="myRange">
                                             </div>
+
+
                                         </div>
 
 
@@ -296,7 +298,7 @@
                                                 xlink:href="#questionSvg"></use></svg>
                                     </span>
                                     <h3 class="test-slider-title">
-                                        Укажіть кількість кімнат </h3>
+                                        Вкажіть кількість кімнат </h3>
                                     <div class="test-slider__content" style='border: 2px solid #ededed;'>
                                         <div class="test-slider__data test-slider__data--row">
                                             <div class="test-slider__elem test-slider__elem-radio skipEl">
@@ -312,7 +314,7 @@
                                                 </label>
                                             </div>
                                             <div class="test-slider__elem test-slider__elem-radio skipEl">
-                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                <input type="radio" checked name="orderRoof" class="customRadio_radio"
                                                        id="orderRoof-3_2" value="2">
 
                                                 <label for="orderRoof-3_2"
@@ -363,7 +365,7 @@
                                     <div class="test-slider__content" style="border: 2px solid #ededed;">
                                         <div class="test-slider__data">
                                             <div class="test-slider__elem test-slider__elem-radio skipEl">
-                                                <input type="radio" name="orderRoof33" class="customRadio_radio"
+                                                <input type="radio" checked name="orderRoof33" class="customRadio_radio"
                                                        id="orderRoof-6_1" value="В течение недели">
 
                                                 <label for="orderRoof-6_1"
@@ -495,8 +497,8 @@
 <!-- 2222 -->
 <div class="overlay" id="modal-recall" style="display: none">
     <div class="modal-wrap">
-        <div class="close-modal">
-            <span class="icon-false"></span>
+        <div class="close-modal"  onclick="hideForm()">
+            <i class="far fa-times-circle"></i>
         </div>
         <div class="modal">
 
@@ -507,14 +509,14 @@
 
 
             <form class="modal-form" action="thanks.php" method="post">
-                <div class="main-input  input-modal-wrap"><span class="icon-Woman"></span><input
+                <div class="main-input  input-modal-wrap"><span class="position-absolute"><i class="far fa-user"></i></span><input
                         class="main-input__inner" type="text" id="text1232" placeholder="Ваше імя" name="yourName"
                         required>
                 </div>
 
-                <div class="main-input input-modal-wrap"><span class="icon-Phones"></span>
+                <div class="main-input input-modal-wrap"><span class="position-absolute"><i class="fas fa-phone-volume"></i></span>
                     <input class="main-input__inner input-modal" type="tel" id="tel23" placeholder="+380 (**) *** ** **"
-                           tabindex="0" name="yourPhone" required>
+                           tabindex="0" name="yourPhone" required onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
                 </div>
 
                 <div class="btn-modal-wrap">
@@ -536,7 +538,7 @@
         <div class="modal">
             <img src="img/modal_ok.svg" alt="" class="modal-icon">
             <div class="modal-title">
-                Спасибі за
+                Дякуємо за
                 проявлений інтерес!
             </div>
             <div class="modal-descr">
@@ -581,6 +583,7 @@
 </div>
 
 <script src="js/script.js"></script>
+<script src="js/class.js"></script>
 
 </body>
 </html>

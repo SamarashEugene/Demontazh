@@ -27,6 +27,26 @@ let arrTestCircle = [testCircle2, testCircle3, testCircle4, testCircle5]
 
 let prevStep = document.getElementById('prevStep')
 
+let myRange = document.querySelector('#myRange')
+let showSquare = document.querySelector('#send-result-polzunok')
+
+myRange.addEventListener('input', squareCick)
+showSquare.addEventListener('keyup', squareBlur)
+
+squareCick()
+
+function go() {
+    document.location = '#calc'
+}
+
+function squareCick() {
+    showSquare.value = myRange.value
+}
+
+function squareBlur() {
+    myRange.value = showSquare.value
+}
+
 let list = [stepOne, stepTwo, stepThree, stepFour, stepFive]
 let i = 0
 let j = 1
@@ -59,8 +79,6 @@ function next() {
     if (i > 0) {
         prevStep.disabled = false
     }
-
-    console.log(i);
 }
 
 function addMark() {
