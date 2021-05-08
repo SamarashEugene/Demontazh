@@ -1,39 +1,40 @@
 "use strict"
 
-let hours = document.getElementById('hour')
-let minutes = document.getElementById('minute')
-let seconds = document.getElementById('second')
 
+let stepOne = document.getElementById('stepOne')
+let stepTwo = document.getElementById('stepTwo')
+let stepThree = document.getElementById('stepThree')
+let stepFour = document.getElementById('stepFour')
+let stepFive = document.getElementById('stepFive')
+let stepSix = document.getElementById('stepSix')
 
-setInterval(timer, 1000)
-timer()
+// let btnHide = document.querySelectorAll('.hide-btn')
+let btnHide = document.getElementById('hide-btn')
+let btnHide1 = document.getElementById('hide-btn1')
 
-function timer() {
-    let now = new Date()
-    let midnight = new Date(
-        now.getFullYear(),
-        now.getMonth(),
-        now.getDate() + 1,
-        0,
-        0,
-        0
-    )
+let type = ''
+let square = Number
+let countOfRoom
+let soonToWork
 
-    let diff = Math.floor((midnight - now) / 1000)
-    let hour = Math.floor(diff / (60 * 60))
-    let minute = Math.floor((diff - hour * 60 * 60) / 60)
-    let second = Math.floor(diff % 60)
+let list = [stepOne, stepTwo, stepThree, stepFour, stepFive, stepSix]
+let i = 0
 
-    hours.innerHTML = hour
-    minutes.innerHTML = addZero(minute)
-    seconds.innerHTML = addZero(second)
+function next() {
+    list[i].style.display = 'none'
+    i++
+    list[i].style.display = 'block'
 
+    if (i === list.length - 1){
+        document.getElementById('nextStep').disabled = true
+        console.log('finish')
+        btnHide.style.display = 'none'
+        btnHide1.style.display = 'none'
+    }
 }
 
-function addZero(num) {
-    if (num >= 0 && num <= 9) {
-        num = '0' + num
-    }
-
-    return num
+function prev(){
+    list[i].style.display = 'block'
+    i--
+    list[i].style.display = 'none'
 }

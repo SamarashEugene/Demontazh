@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/ico-moon/style.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">-->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -192,26 +192,6 @@
                             <div class="test-circle test-circle-5">
                             </div>
 
-                            <!-- <div class="test-block test-block-5">
-                            </div>
-
-                            <div class="test-circle test-circle-6">
-                            </div>
-
-
-                            
-
-                            <div class="test-block test-block-6">
-                            </div>
-
-                            <div class="test-circle test-circle-7">
-                            </div>
-
-                            <div class="test-block test-block-7">
-                            </div>
-
-                            <div class="test-circle test-circle-8">
-                            </div
 
                         </div>
                     </div>
@@ -225,7 +205,7 @@
                             <input type="hidden" name="formname" value="test">
 
                             <div class="test-slider">
-                                <div class="test-slider__item first-test-item">
+                                <div id="stepOne" class="test-slider__item first-test-item">
                                     <h3 class="test-slider-title" style="width: 100%;text-align: center;">Виберіть тип
                                         нерухомості</h3>
                                     <div class="test-slider__content" style="padding: 0;justify-content: center;">
@@ -234,7 +214,7 @@
                                              style="margin-right: 1.5%;margin-left: 1.5%;">
                                             <label for="nertype-1">
                                                    <span class="customRadio__img"
-                                                         style="background: url(img/item1_1.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(https://lh3.googleusercontent.com/proxy/ZomaJ-nykzGTKFej57PP3BckkoD7gfFbGjxX9hOcoyO9UPpyZcJhRc4lZafOb-w0dpqOUo31uXp6a3ss5v_u5AIV9FZGvyekAatbCrWfL7x-aQ) no-repeat center; background-size: cover;">
                                                    </span>
                                             </label>
 
@@ -252,7 +232,7 @@
                                              style="margin-right: 1.5%;margin-left: 1.5%;">
                                             <label for="nertype-2">
                                                    <span class="customRadio__img"
-                                                         style="background: url(img/item1_2.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(https://valentaymbud.com.ua/wp-content/uploads/2016/10/viber-image.jpg) no-repeat center; background-size: cover;">
                                                    </span>
                                             </label>
 
@@ -270,7 +250,7 @@
 
                                 </div>
 
-                                <div class="test-slider__item ner-block-1" style="display: none;">
+                                <div id="stepTwo" onclick="nextOne()"  class="test-slider__item ner-block-1" style="display: none;">
                                     <h3 class="test-slider-title" style='width: 100%;text-align: center;'>Виберіть тип
                                         вашого об'єкта</h3>
                                     <div class="test-slider__content" style="padding: 0;border: 0;">
@@ -278,7 +258,7 @@
                                         <div class="test-slider__elem-min skipEl" style="margin-bottom: 15px;">
                                             <label for="ques2-1">
                                                    <span class="customRadio__img"
-                                                         style="background: url(img/item2_1.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(https://lh3.googleusercontent.com/proxy/hUy57ZBr4DfUM5tkFBJy0iFZzdX9mnoEE_wTtkH11v-S2z30iKzij7hYe0SwiMEQNfIFMogRmp_I2u8s2TjHGv4f7MQ5V9mQC_weT-JcYimwySiUHQw8co0gC2X9LJP4CNACY_sFmi5yIzTigq5VFB1z0DSHpH7LieQfP35PTpH2alLd9FtSJYnvbx_7DjpZ0b26-E7A2kACdxlW09s7Q0h8U1BE9tbeUEyTAp2TH6Ox3yjqhvPdMJpn3RRFmkpDZNx5aTj32piEoxNb19oQcG3p7xwYv9CEoIp1hTK52t_fHXKVMmdbzCcL-l0XWcGSTE8WpD2yqZpvdavM) no-repeat center; background-size: cover;">
                                                    </span>
                                             </label>
 
@@ -295,7 +275,7 @@
                                         <div class="test-slider__elem-min skipEl" style="margin-bottom: 15px;">
                                             <label for="ques2-2">
                                                    <span class="customRadio__img"
-                                                         style="background: url(img/item2_2.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(https://agam.kiev.ua/images/image4068579681500906881.jpg) no-repeat center; background-size: cover;">
                                                    </span>
                                             </label>
 
@@ -312,7 +292,7 @@
                                         <div class="test-slider__elem-min skipEl" style="margin-bottom: 15px;">
                                             <label for="ques2-3">
                                                    <span class="customRadio__img"
-                                                         style="background: url(img/item2_3.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(https://img.lunstatic.net/building-1600x1200/45264.jpg) no-repeat center; background-size: cover;">
                                                    </span>
                                             </label>
 
@@ -336,7 +316,7 @@
 
                                 </div>
 
-                                <div class="test-slider__item" style="display: none;">
+                                <div id="stepThree" onclick="nextTwo()" class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title test-slider-title-m">
                                         Укажіть орієнтовну площу</h3>
 
@@ -370,7 +350,7 @@
 
                                 </div>
 
-                                <div class="test-slider__item" style="display: none;">
+                                <div id="stepFour" onclick="nextThree()" class="test-slider__item" style="display: none;">
                                     <span class="question question-test" style="display: none;">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                              xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="20"
@@ -442,7 +422,7 @@
 
                                 </div>
 
-                                <div class="test-slider__item" style="display: none;">
+                                <div id="stepFive" onclick="nextFour()" class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title">
                                         Як швидко потрібно приступити до роботи?</h3>
                                     <div class="test-slider__content" style="border: 2px solid #ededed;">
@@ -506,7 +486,7 @@
 
                                 </div>
 
-                                <div class="test-slider__item" style="display: none;">
+                                <div id="stepSix" onclick="finish()" class="test-slider__item" style="display: none;">
                                     <div class="test-slider__item-end">
                                         <div class="test-slider__item-end_inner" style="margin: 0 auto;">
                                             <p class="test-slider__item-end__complete">
@@ -536,14 +516,14 @@
                                 </div>
                             </div>
 
-                            <div class="text-subbtn">
+                            <div class="text-subbtn" id="hide-btn">
                                 Виберіть варіант відповіді або введіть значення
                             </div>
-                            <div class="btn--wrap test__btn-block">
-                                <button class=" btn-test prev-test" disabled="true">
+                            <div class="btn--wrap test__btn-block" id="hide-btn1">
+                                <button class=" btn-test prev-test" onclick="prev()">
                                     <span>Назад</span>
                                 </button>
-                                <button class="btn-test next-test" disabled="true">
+                                <button class="btn-test next-test" onclick="next()" id="nextStep">
                                     <span>Далі</span>
 
                                 </button>
@@ -562,7 +542,7 @@
     <div class="other" style="margin-top: 0;">
         <div class="container">
             <div class="other-left">
-                <p>Все права захищено</p>
+                <p>Всі права захищено</p>
             </div>
             <div class="other-center">
                 <p>Політика конфіденційності</p>
@@ -663,6 +643,7 @@
     </div>
 </div>
 
+<script src="js/script.js"></script>
 
 </body>
 </html>

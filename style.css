@@ -536,7 +536,7 @@ button {
 }
 
 .first-screen-content__desc span {
-    color: ##232324;
+    color: #232324;
 }
 
 .first-screen-content__desc:before {
@@ -851,7 +851,7 @@ button {
 }
 
 .test-item__desc {
-    color: ##232324;
+    color: #232324;
     font-size: 1.25vw;
     text-align: center;
     margin-top: 0.1vw;
@@ -1124,7 +1124,7 @@ button {
 
 .test-slider__item-end__complete {
     font-size: 1.4vw;
-    color: ##232324;
+    color: #232324;
 }
 
 .test-slider-trigger {
@@ -1510,10 +1510,10 @@ button {
 
 .btn-test {
     padding: 1.7rem 5rem;
-    color: ##232324;
+    color: #232324;
     font-size: 1.4rem;
     font-weight: 500;
-    border: 2px solid ##232324;
+    border: 2px solid #232324;
     border-radius: 5px;
     margin: 0 1.5rem;
     overflow: hidden;
@@ -1527,7 +1527,7 @@ button {
 }
 
 .next-test:not(:disabled) {
-    background-color: ##232324;
+    background-color: #232324;
     color: #ffffff;
     -webkit-transition: none;
     -o-transition: none;
@@ -1567,9 +1567,9 @@ button {
     opacity: 1;
 }
 
-.next-test:disable {
-    color: #fec009;
-    border: 2px solid #fec009;
+.next-test:disabled {
+    color: #222222;
+    border: 2px solid #222222;
 }
 
 .test-slider_item {
@@ -1608,7 +1608,7 @@ button {
 
 .test-circle-active:before {
     opacity: 1;
-    background-color: ##232324;
+    background-color: #232324;
 }
 
 .test-block {
@@ -1642,7 +1642,7 @@ button {
     background: -webkit-repeating-linear-gradient(135deg, #f1c20c 0%, #f9ca0c 1%, #f9ca0c 7%);
     background: -o-repeating-linear-gradient(135deg, #f1c20c 0%, #f9ca0c 1%, #f9ca0c 7%);
     background: repeating-linear-gradient(-45deg, #f1c20c 0%, #f9ca0c 1%, #f9ca0c 7%);
-    background: ##232324;
+    background: #232324;
 }
 
 #testForm {
@@ -1797,7 +1797,7 @@ button {
     transform: translate(-50%, -50%) scale(0);
     width: 8px;
     height: 8px;
-    background-color: ##232324;
+    background-color: 232324;
     border-radius: 100%;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -2095,7 +2095,7 @@ button {
     background: -webkit-gradient(linear, left top, right top, from(#f5ae08), to(#f9ca0c));
     background: linear-gradient(to right, #f5ae08 0%, #f9ca0c 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5ae08', endColorstr='#f9ca0c', GradientType=1);
-    background: ##232324;
+    background: #232324;
 }
 
 .ui-slider-handle:before {
@@ -2855,8 +2855,8 @@ button {
 
 .fourth-screen-tabs-item-right__link {
     font-size: 0.729vw;
-    color: ##232324;
-    border-bottom: 1px solid ##232324;
+    color: #232324;
+    border-bottom: 1px solid #232324;
     position: relative;
     -ms-flex-item-align: center;
     align-self: center;
@@ -3210,9 +3210,9 @@ button {
 
 .project-block-info-table__row__right__desc__link {
     font-size: 0.729vw;
-    color: ##232324;
+    color: #232324;
     margin-top: 0.5vw;
-    border-bottom: 1px solid ##232324;
+    border-bottom: 1px solid #232324;
     cursor: pointer;
 }
 
@@ -3742,8 +3742,8 @@ button {
 }
 
 .offer-block-left-inner-download__look {
-    color: ##232324;
-    border-bottom: 1px solid ##232324;
+    color: #232324;
+    border-bottom: 1px solid #232324;
     font-size: 0.729vw;
     margin-top: 2vw;
     position: relative;
@@ -3912,8 +3912,8 @@ button {
 
 .steps-item__inner__link {
     font-size: 0.729vw;
-    color: ##232324;
-    border-bottom: 1px solid ##232324;
+    color: #232324;
+    border-bottom: 1px solid #232324;
     margin-top: 1.2rem;
     text-align: center;
 }
@@ -4307,7 +4307,7 @@ button {
 .smeta__mockup__desc {
     font-size: 0.729vw;
     line-height: 2.14em;
-    color: ##232324;
+    color: 232324;
     text-decoration: underline;
     position: absolute;
     left: 150%;
@@ -5220,7 +5220,7 @@ button {
     -webkit-transform: translate(100%, -100%);
     -ms-transform: translate(100%, -100%);
     transform: translate(100%, -100%);
-    color: ##232324;
+    color: #232324;
     font-size: 1.7vw;
     cursor: pointer;
     -webkit-transition: all 0.4s;
