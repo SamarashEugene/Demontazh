@@ -22,6 +22,8 @@ let testCircle3 = document.getElementById('test-circle-3')
 let testCircle4 = document.getElementById('test-circle-4')
 let testCircle5 = document.getElementById('test-circle-5')
 
+let whenClickPhone = document.querySelectorAll('input[type=tel]')
+
 let arrTestBlock = [testBlock1, testBlock2, testBlock3, testBlock4]
 let arrTestCircle = [testCircle2, testCircle3, testCircle4, testCircle5]
 
@@ -86,12 +88,27 @@ function addMark() {
     arrTestCircle[i - 1].classList.add('test-circle-active')
 }
 
+for (let i = 0; i < whenClickPhone.length; i++) {
+    whenClickPhone[i].addEventListener('click', clickOnTel)
+    whenClickPhone[i].addEventListener('keyup', onlyNumber)
 
+}
 
+function clickOnTel() {
+    this.maxLength = 12
+    this.value = '380'
+    this.removeEventListener('click', clickOnTel)
+}
 
+function onlyNumber() {
+    this.value = this.value.replace(/[^\d]/g,'');
+}
 
-
-
+function valid(event) {
+    if (/^\+\d+ $/.test(this.value) && event.key === 'Backspace') {
+        event.preventDefault();
+    }
+}
 
 
 

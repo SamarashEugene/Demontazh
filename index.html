@@ -88,7 +88,7 @@
                 </div> -->
                 <div class="header-inner-logo-right" style="margin-left: 0;">
                     <p class="header-inner-logo-right__text" style="color: #fff;">
-                        Більше 7 років займаємось демонтажем приміщень в Хмельницькому
+                        Більше 3 років займаємось демонтажем приміщень в Хмельницькому
                     </p>
                 </div>
             </div>
@@ -135,9 +135,9 @@
                 </div>
             </div>
             <div class="btn-main-wrap ">
-                    <button class="btn btn-main test-scroll" onclick="go()" id="btn-link" href="#calc">
-                        <span><i class="fas fa-calculator"></i></span>Калькулятор вартості
-                    </button>
+                <button class="btn btn-main test-scroll" onclick="go()" id="btn-link" href="#calc">
+                    <span><i class="fas fa-calculator"></i></span>Калькулятор вартості
+                </button>
 
             </div>
         </div>
@@ -204,10 +204,11 @@
                 <div class="test__content">
 
                     <div class="test-slider__wrap" style="margin-right: auto;margin-left: auto;">
-                        <form action="" id="testForm" class="test-form" method="">
+                        <form action="" id="testForm" class="test-form" method="POST">
                             <input type="hidden" name="formname" value="test">
 
                             <div class="test-slider">
+
                                 <div id="stepOne" class="test-slider__item first-test-item">
                                     <h3 class="test-slider-title" style="width: 100%;text-align: center;">Виберіть тип
                                         нерухомості</h3>
@@ -217,7 +218,7 @@
                                              style="margin-right: 1.5%;margin-left: 1.5%;">
                                             <label for="nertype-1">
                                                    <span class="customRadio__img"
-                                                         style="background: url(https://lh3.googleusercontent.com/proxy/ZomaJ-nykzGTKFej57PP3BckkoD7gfFbGjxX9hOcoyO9UPpyZcJhRc4lZafOb-w0dpqOUo31uXp6a3ss5v_u5AIV9FZGvyekAatbCrWfL7x-aQ) no-repeat center; background-size: cover;">
+                                                         style="background: url(img/1.1.jpg) no-repeat center; background-size: cover;">
                                                    </span>
                                             </label>
 
@@ -235,7 +236,7 @@
                                              style="margin-right: 1.5%;margin-left: 1.5%;">
                                             <label for="nertype-2">
                                                    <span class="customRadio__img"
-                                                         style="background: url(https://valentaymbud.com.ua/wp-content/uploads/2016/10/viber-image.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(img/1.2.jpg) no-repeat center; background-size: cover;">
                                                    </span>
                                             </label>
 
@@ -252,7 +253,6 @@
                                     </div>
 
                                 </div>
-
 
                                 <div id="stepTwo" class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title test-slider-title-m">
@@ -400,18 +400,18 @@
 
                                                 </label>
                                             </div>
-                                            <!-- <div class="test-slider__elem test-slider__elem-radio">
-                                                <input type="radio" name="orderRoof33" class="customRadio_radio"
-                                                       id="orderRoof-6_4" value="Все залежить від ціни">
+                                            <!--                                            <div class="test-slider__elem test-slider__elem-radio">-->
+                                            <!--                                                <input type="radio" name="orderRoof33" class="customRadio_radio"-->
+                                            <!--                                                       id="orderRoof-6_4" value="Все залежить від ціни">-->
 
-                                                <label for="orderRoof-6_4"
-                                                       class="customRadio_label customRadio_label-fix">
-                                               <span class="customRadio_label-cirkle">
-                                               </span>
-                                                    <span>Все залежить від ціни</span>
+                                            <!--                                                <label for="orderRoof-6_4"-->
+                                            <!--                                                       class="customRadio_label customRadio_label-fix">-->
+                                            <!--                                               <span class="customRadio_label-cirkle">-->
+                                            <!--                                               </span>-->
+                                            <!--                                                    <span>Все залежить від ціни</span>-->
 
-                                                </label>
-                                            </div> -->
+                                            <!--                                                </label>-->
+                                            <!--                                            </div>-->
 
                                         </div>
                                         <div class="test-slider__img test-slider__img--2">
@@ -424,6 +424,7 @@
                                 </div>
 
                                 <div id="stepFive" class="test-slider__item" style="display: none;">
+
                                     <div class="test-slider__item-end">
                                         <div class="test-slider__item-end_inner" style="margin: 0 auto;">
                                             <p class="test-slider__item-end__complete">
@@ -436,12 +437,15 @@
                                             </div>
                                             <div class="inputs_form">
                                                 <div class="main-input" style="margin-bottom: 15px;"><span
-                                                        class="icon-Woman"></span><input
+                                                        class="position-absolute"><i
+                                                        class="far fa-user"></i></span><input
                                                         class="main-input__inner" type="text"
                                                         placeholder="Ваше імя" name="yourName" required>
                                                 </div>
-                                                <div class="main-input"><span class="icon-Phones"></span><input
+                                                <div class="main-input"><span class="position-absolute"><i
+                                                        class="fas fa-phone-volume"></i></span><input
                                                         class="main-input__inner" type="tel" id="tel"
+                                                        maxlength="10"
                                                         placeholder="+380 (**) *** ** **" name="yourPhone" required>
                                                 </div>
                                                 <button class="btn_quiz btn" name="sendForm1" type="submit">Відправити
@@ -497,7 +501,7 @@
 <!-- 2222 -->
 <div class="overlay" id="modal-recall" style="display: none">
     <div class="modal-wrap">
-        <div class="close-modal"  onclick="hideForm()">
+        <div class="close-modal" onclick="hideForm()">
             <i class="far fa-times-circle"></i>
         </div>
         <div class="modal">
@@ -509,14 +513,18 @@
 
 
             <form class="modal-form" action="thanks.php" method="post">
-                <div class="main-input  input-modal-wrap"><span class="position-absolute"><i class="far fa-user"></i></span><input
+                <div class="main-input  input-modal-wrap"><span class="position-absolute"><i
+                        class="far fa-user"></i></span><input
                         class="main-input__inner" type="text" id="text1232" placeholder="Ваше імя" name="yourName"
                         required>
                 </div>
 
-                <div class="main-input input-modal-wrap"><span class="position-absolute"><i class="fas fa-phone-volume"></i></span>
-                    <input class="main-input__inner input-modal" type="tel" id="tel23" placeholder="+380 (**) *** ** **"
-                           tabindex="0" name="yourPhone" required onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                <div class="main-input input-modal-wrap"><span class="position-absolute"><i
+                        class="fas fa-phone-volume"></i></span>
+                    <input class="main-input__inner input-modal" type="tel" id="tel23" value="380"
+                           placeholder="+380 (**) *** ** **"
+                           tabindex="0" name="yourPhone" required
+                           onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
                 </div>
 
                 <div class="btn-modal-wrap">
