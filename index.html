@@ -16,6 +16,7 @@
 </head>
 <body>
 
+
 <div class="first-screen" style="box-shadow: 0 0 0 9999px rgba(0,0,0,0.5) inset;background: #000;position: relative;">
     <div id="video-bg">
         <video width="100%" height="auto" preload="auto" autoplay muted loop="loop" playsinline>
@@ -67,8 +68,8 @@
             #video-bg > video {
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
+                width: 100vw;
+                /*height: 100%;*/
                 object-fit: cover;
             }
         }
@@ -76,6 +77,12 @@
         @media (max-width: 768px) {
             .first-screen .container {
                 padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 512px) {
+            #video-bg {
+                background: url(img/bg_for_mobile.png) no-repeat;
             }
         }
     </style>
@@ -204,7 +211,7 @@
                 <div class="test__content">
 
                     <div class="test-slider__wrap" style="margin-right: auto;margin-left: auto;">
-                        <form action="" id="testForm" class="test-form" method="POST">
+                        <form action="#" id="testForm" class="test-form" method="POST">
                             <input type="hidden" name="formname" value="test">
 
                             <div class="test-slider">
@@ -501,7 +508,7 @@
 <!-- 2222 -->
 <div class="overlay" id="modal-recall" style="display: none">
     <div class="modal-wrap">
-        <div class="close-modal" onclick="hideForm()">
+        <div class="close-modal" id="hideForm">
             <i class="far fa-times-circle"></i>
         </div>
         <div class="modal">
@@ -512,7 +519,7 @@
             </div>
 
 
-            <form class="modal-form" action="thanks.php" method="post">
+            <form class="modal-form" action="#" method="post">
                 <div class="main-input  input-modal-wrap"><span class="position-absolute"><i
                         class="far fa-user"></i></span><input
                         class="main-input__inner" type="text" id="text1232" placeholder="Ваше імя" name="yourName"

@@ -6850,3 +6850,7 @@ button {
 .position-absolute{
     position: absolute;
 }
+
+input:focus{
+    box-shadow: 0 0 15px #7a956b;
+}
