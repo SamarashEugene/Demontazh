@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Демонтаж ХМ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="fonts/ico-moon/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<div class="first-screen" style="box-shadow: 0 0 0 9999px rgba(0,0,0,0.5) inset;background: #000;position: relative;">
+    <div id="video-bg">
+        <video width="100%" height="auto" preload="auto" autoplay muted loop="loop" playsinline>
+            <source src="img/video.mp4" type="video/mp4"></source>
+        </video>
+    </div>
+    <div class="shadow"></div>
+    <style>
+        .shadow {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 2;
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.4) inset;
+        }
+
+        .first-screen .container {
+            position: relative;
+            z-index: 3;
+            min-height: 100vh;
+        }
+
+        #video-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+            background: url(img/bg.jpg) no-repeat #94a233;
+            background-size: cover;
+        }
+
+        #video-bg > video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        @supports (object-fit: cover) {
+            #video-bg > video {
+                top: 0;
+                left: 0;
+                width: 100vw;
+                /*height: 100%;*/
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .first-screen .container {
+                padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 512px) {
+            #video-bg {
+                background: url(img/bg_for_mobile.png) no-repeat;
+            }
+        }
+    </style>
+    <div class="container">
+        <header class="header-inner">
+            <div class="header-inner-logo">
+                <!-- <div class="header-inner-logo-left" style="display: none;">
+                    <img src="img/logo.png" alt="">
+                    <p class="header-inner-logo-left__text">ремонт <br>під ключ</p>
+                </div> -->
+                <div class="header-inner-logo-right" style="margin-left: 0;">
+                    <p class="header-inner-logo-right__text" style="color: #fff;">
+                        Більше 3 років займаємось демонтажем приміщень в Хмельницькому
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="header-inner-socials">
+            </div> -->
+            <div class="header-inner-contacts" style="margin-top: 7px;">
+                <div class="contacts">
+                    <p class="contacts__title" style="text-align: center;">
+                        Працюємо без вихідних з 9:00 по 18:00
+                    </p>
+                    <div class="contacts-phone">
+                        <div class="contacts-phone__num">
+                            <span><i class="fas fa-phone-volume"></i></span>
+
+                            <div style="display: inline-block;">
+                                <a href="tel:+380666054488">+380 67 404 46-42</a>
+                            </div>
+                        </div>
+                        <p class="contacts-phone__recall consult" onclick="showForm()">
+                            Перетелефонуйте мені
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="first-screen-content">
+            <p class="first-screen-content__uptitle subtitle-first">
+                Плануєте демонтаж? <br>
+                Вивіз сіття?
+            </p>
+            <h1 class="title-first">Пройдіть тест і дізнайтесь вартість робіт</h1>
+            <p class="first-screen-content__desc subtitle-first">
+                Проведемо демонтаж вчасно
+            </p>
+            <div class="first-screen-content-adv">
+                <div class="first-screen-content-adv__item" style="color: #FFFFFF">
+                    <i class="fas fa-shipping-fast"></i>
+                    <p>Весь комплекс робіт</p>
+                </div>
+                <div class="first-screen-content-adv__item" style="color: #FFFFFF">
+                    <i class="fas fa-wallet"></i>
+                    <p>РОБОТа З ЮРИДИЧНИМИ ОСОБАМИ.<br>
+                        Поетапна оплата</p>
+                </div>
+            </div>
+            <div class="btn-main-wrap ">
+                <button class="btn btn-main test-scroll" onclick="go()" id="btn-link" href="#calc">
+                    <span><i class="fas fa-calculator"></i></span>Калькулятор вартості
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<section class="second-screen grey" style="padding-bottom: 50px;">
+    <div class="test">
+
+
+        <div class="container" id="calc">
+            <div class="test-item__content form-before">
+                <div class="test-item__header">
+                    <h2 class="section-title section-title--black">Прорахуйте попередню вартість та час виконання.</h2>
+                    <p class="test-item__desc">Дайте відповідь на 5 запитань та отримайте прораховану вартість демонтажу
+                        вашого приміщення.</p>
+
+                    <div class="test-item__progress">
+                        <div class="test-item__number">
+                            <span class="test-item__number-furst" id="countStep">1</span>
+                            <span class="test-item__number-all">/ 5</span>
+                            <span class="test-item__number-text">Майже готово!</span>
+                        </div>
+
+                        <div class="test__visual">
+
+                            <div class="test-circle test-circle-0 test-circle-active">
+                            </div>
+
+                            <div class="test-block test-block-0 test-block-active">
+                            </div>
+
+                            <div class="test-circle test-circle-1 test-circle-active">
+                            </div>
+
+                            <div class="test-block test-block-1" id="test-block-1">
+                            </div>
+
+                            <div class="test-circle test-circle-2" id="test-circle-2">
+                            </div>
+
+                            <div class="test-block test-block-2" id="test-block-2">
+                            </div>
+
+                            <div class="test-circle test-circle-3" id="test-circle-3">
+                            </div>
+
+                            <div class="test-block test-block-3" id="test-block-3">
+                            </div>
+
+                            <div class="test-circle test-circle-4" id="test-circle-4">
+                            </div>
+                            <div class="test-block test-block-4" id="test-block-4">
+                            </div>
+
+                            <div class="test-circle test-circle-5" id="test-circle-5">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="test__content">
+
+                    <div class="test-slider__wrap" style="margin-right: auto;margin-left: auto;">
+                        <form action="#" id="testForm" class="test-form" method="POST">
+                            <input type="hidden" name="formname" value="test">
+
+                            <div class="test-slider">
+
+                                <div id="stepOne" class="test-slider__item first-test-item">
+                                    <h3 class="test-slider-title" style="width: 100%;text-align: center;">Виберіть тип
+                                        нерухомості</h3>
+                                    <div class="test-slider__content" style="padding: 0;justify-content: center;">
+
+                                        <div class="test-slider__elem-min skipEl return-ner"
+                                             style="margin-right: 1.5%;margin-left: 1.5%;">
+                                            <label for="nertype-1">
+                                                   <span class="customRadio__img"
+                                                         style="background: url(img/1.1.jpg) no-repeat center; background-size: cover;">
+                                                   </span>
+                                            </label>
+
+                                            <input type="radio" checked name="nertype" class="customRadio_radio"
+                                                   id="nertype-1" value="Жила нерухомість">
+
+                                            <label for="nertype-1" class="customRadio_label">
+                                                   <span class="customRadio_label-cirkle">
+                                                   </span>
+                                                <span>Жила нерухомість</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="test-slider__elem-min skipEl select-ner"
+                                             style="margin-right: 1.5%;margin-left: 1.5%;">
+                                            <label for="nertype-2">
+                                                   <span class="customRadio__img"
+                                                         style="background: url(img/1.2.jpg) no-repeat center; background-size: cover;">
+                                                   </span>
+                                            </label>
+
+                                            <input type="radio" name="nertype" class="customRadio_radio"
+                                                   id="nertype-2" value="Комерційна нерухомість">
+
+                                            <label for="nertype-2" class="customRadio_label">
+                                                   <span class="customRadio_label-cirkle">
+                                                   </span>
+                                                <span>Комерційна нерухомість</span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div id="stepTwo" class="test-slider__item" style="display: none;">
+                                    <h3 class="test-slider-title test-slider-title-m">
+                                        Укажіть орієнтовну площу</h3>
+
+                                    <div class="test-slider__content">
+                                        <div class="test-slider__img">
+                                            <img src="img/item2_1.png"
+                                                 alt="">
+                                        </div>
+
+                                        <div class="test-slider__data">
+                                            <h4 class="test-slider__data-title">
+                                                Площа, м <sup>2</sup>
+                                            </h4>
+                                            <div class="send-result-polzunok_wrap">
+                                                <label for="send-result-polzunok">м<sup>2</sup></label>
+                                                <input type="text" name="send-result-polzunok" id="send-result-polzunok"
+                                                       class="input-test" value=""
+                                                       onkeyup="this.value = this.value.replace(/[^\d]/g,'');"></div>
+
+                                            <div class="slidecontainer-tick">
+                                                <input type="range" min="1" max="300" value="50" class="slider-tick"
+                                                       id="myRange">
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <div id="stepThree" class="test-slider__item" style="display: none;">
+                                    <span class="question question-test" style="display: none;">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="20"
+                                             viewBox="0 0 24 20"><defs><g id="questionSvg"><g
+                                                transform="translate(-981 -631)">
+                                                <path id="2twwa"
+                                                      d="M1005 641c0 5.523-4.991 10-11.149 10-2.263 0-4.368-.606-6.126-1.645l-5.773 1.541a.773.773 0 0 1-.79-.253.715.715 0 0 1-.068-.807l2.637-4.635a9.11 9.11 0 0 1-1.029-4.201c0-5.523 4.992-10 11.15-10 6.157 0 11.148 4.477 11.148 10zm-10.064 4.065c0-.592-.495-1.073-1.103-1.073-.609 0-1.104.481-1.104 1.073 0 .591.495 1.072 1.104 1.072.608 0 1.103-.48 1.103-1.072zm1.59-6.584c0-1.444-1.208-2.618-2.693-2.618-1.486 0-2.694 1.174-2.694 2.618 0 .46.384.833.857.833a.846.846 0 0 0 .856-.833c0-.525.44-.953.98-.953.541 0 .981.428.981.953 0 .653-.315.862-.791 1.179-.441.292-1.046.694-1.046 1.5v1.207c0 .46.384.833.857.833a.846.846 0 0 0 .856-.833v-1.12c.054-.045.155-.116.3-.213.575-.382 1.537-1.021 1.537-2.553z"></path></g></g></defs><use
+                                                xlink:href="#questionSvg"></use></svg>
+                                    </span>
+                                    <h3 class="test-slider-title">
+                                        Вкажіть кількість кімнат </h3>
+                                    <div class="test-slider__content" style='border: 2px solid #ededed;'>
+                                        <div class="test-slider__data test-slider__data--row">
+                                            <div class="test-slider__elem test-slider__elem-radio skipEl">
+                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                       id="orderRoof-3_1" value="1">
+
+                                                <label for="orderRoof-3_1"
+                                                       class="customRadio_label customRadio_label-fix">
+                                               <span class="customRadio_label-cirkle">
+                                               </span>
+                                                    <span>1</span>
+
+                                                </label>
+                                            </div>
+                                            <div class="test-slider__elem test-slider__elem-radio skipEl">
+                                                <input type="radio" checked name="orderRoof" class="customRadio_radio"
+                                                       id="orderRoof-3_2" value="2">
+
+                                                <label for="orderRoof-3_2"
+                                                       class="customRadio_label customRadio_label-fix">
+                                               <span class="customRadio_label-cirkle">
+                                               </span>
+                                                    <span>2</span>
+
+                                                </label>
+                                            </div>
+                                            <div class="test-slider__elem test-slider__elem-radio skipEl">
+                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                       id="orderRoof-3_3" value="3">
+
+                                                <label for="orderRoof-3_3"
+                                                       class="customRadio_label customRadio_label-fix">
+                                               <span class="customRadio_label-cirkle">
+                                               </span>
+                                                    <span>3</span>
+
+                                                </label>
+                                            </div>
+                                            <div class="test-slider__elem test-slider__elem-radio skipEl">
+                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                       id="orderRoof-3_4" value="4 и более">
+
+                                                <label for="orderRoof-3_4"
+                                                       class="customRadio_label customRadio_label-fix">
+                                               <span class="customRadio_label-cirkle">
+                                               </span>
+                                                    <span>4 та більше</span>
+
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="test-slider__img test-slider__img--2">
+                                            <img src="img/room3.png" alt="">
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                                <div id="stepFour" class="test-slider__item" style="display: none;">
+                                    <h3 class="test-slider-title">
+                                        Як швидко потрібно приступити до роботи?</h3>
+                                    <div class="test-slider__content" style="border: 2px solid #ededed;">
+                                        <div class="test-slider__data">
+                                            <div class="test-slider__elem test-slider__elem-radio skipEl">
+                                                <input type="radio" checked name="orderRoof33" class="customRadio_radio"
+                                                       id="orderRoof-6_1" value="В течение недели">
+
+                                                <label for="orderRoof-6_1"
+                                                       class="customRadio_label customRadio_label-fix">
+                                               <span class="customRadio_label-cirkle">
+                                               </span>
+                                                    <span>На протязі неділі</span>
+
+                                                </label>
+                                            </div>
+                                            <div class="test-slider__elem test-slider__elem-radio skipEl">
+                                                <input type="radio" name="orderRoof33" class="customRadio_radio"
+                                                       id="orderRoof-6_2" value="В течение месяца">
+
+                                                <label for="orderRoof-6_2"
+                                                       class="customRadio_label customRadio_label-fix">
+                                               <span class="customRadio_label-cirkle">
+                                               </span>
+                                                    <span>На протязі місяця</span>
+
+                                                </label>
+                                            </div>
+                                            <div class="test-slider__elem test-slider__elem-radio skipEl">
+                                                <input type="radio" name="orderRoof33" class="customRadio_radio"
+                                                       id="orderRoof-6_3" value="В течение полугода">
+
+                                                <label for="orderRoof-6_3"
+                                                       class="customRadio_label customRadio_label-fix">
+                                               <span class="customRadio_label-cirkle">
+                                               </span>
+                                                    <span>Більше місяця</span>
+
+                                                </label>
+                                            </div>
+                                            <!--                                            <div class="test-slider__elem test-slider__elem-radio">-->
+                                            <!--                                                <input type="radio" name="orderRoof33" class="customRadio_radio"-->
+                                            <!--                                                       id="orderRoof-6_4" value="Все залежить від ціни">-->
+
+                                            <!--                                                <label for="orderRoof-6_4"-->
+                                            <!--                                                       class="customRadio_label customRadio_label-fix">-->
+                                            <!--                                               <span class="customRadio_label-cirkle">-->
+                                            <!--                                               </span>-->
+                                            <!--                                                    <span>Все залежить від ціни</span>-->
+
+                                            <!--                                                </label>-->
+                                            <!--                                            </div>-->
+
+                                        </div>
+                                        <div class="test-slider__img test-slider__img--2">
+                                            <img src="img/6_1.png" alt="">
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                                <div id="stepFive" class="test-slider__item" style="display: none;">
+
+                                    <div class="test-slider__item-end">
+                                        <div class="test-slider__item-end_inner" style="margin: 0 auto;">
+                                            <p class="test-slider__item-end__complete">
+                                                Готово!
+                                            </p>
+                                            <div class="test-slider__item-end__send">
+                                                <p class="test-slider__item-end__title">
+                                                    Щоб отримати прорахунок, залишіть свої данні
+                                                </p>
+                                            </div>
+                                            <div class="inputs_form">
+                                                <div class="main-input" style="margin-bottom: 15px;"><span
+                                                        class="position-absolute"><i
+                                                        class="far fa-user"></i></span><input
+                                                        class="main-input__inner" type="text"
+                                                        placeholder="Ваше імя" name="yourName" required>
+                                                </div>
+                                                <div class="main-input"><span class="position-absolute"><i
+                                                        class="fas fa-phone-volume"></i></span><input
+                                                        class="main-input__inner" type="tel" id="tel"
+                                                        maxlength="10"
+                                                        placeholder="+380 (**) *** ** **" name="yourPhone" required>
+                                                </div>
+                                                <button class="btn_quiz btn" name="sendForm1" type="submit">Відправити
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="btnHide">
+                                <div class="text-subbtn" id="hide-btn">
+                                    Виберіть варіант відповіді
+                                </div>
+                                <div class="btn--wrap test__btn-block" id="hide-btn1">
+                                    <button class=" btn-test prev-test" onclick="prev()" id="prevStep">
+                                        <span>Назад</span>
+                                    </button>
+                                    <button class="btn-test next-test" onclick="next()" id="nextStep">
+                                        <span>Далі</span>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="twelveth-screen" style="padding-top: 0;">
+
+    <div class="other" style="margin-top: 0;">
+        <div class="container">
+            <div class="other-left">
+                <p>Всі права захищено</p>
+            </div>
+            <div class="other-center">
+                <p>Політика конфіденційності</p>
+            </div>
+            <div class="other-right">
+                <p>Демонтажні роботи</p>
+                <p>Вивіз сміття</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- 2222 -->
+<div class="overlay" id="modal-recall" style="display: none">
+    <div class="modal-wrap">
+        <div class="close-modal" id="hideForm">
+            <i class="far fa-times-circle"></i>
+        </div>
+        <div class="modal">
+
+            <div class="modal-title">
+                Передзвонимо протягом
+                10 хвилин
+            </div>
+
+
+            <form class="modal-form" action="#" method="post">
+                <div class="main-input  input-modal-wrap"><span class="position-absolute"><i
+                        class="far fa-user"></i></span><input
+                        class="main-input__inner" type="text" id="text1232" placeholder="Ваше імя" name="yourName"
+                        required>
+                </div>
+
+                <div class="main-input input-modal-wrap"><span class="position-absolute"><i
+                        class="fas fa-phone-volume"></i></span>
+                    <input class="main-input__inner input-modal" type="tel" id="tel23" value="380"
+                           placeholder="+380 (**) *** ** **"
+                           tabindex="0" name="yourPhone" required
+                           onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                </div>
+
+                <div class="btn-modal-wrap">
+                    <button type="submit" name="sendForm3" class="btn modal-btn">
+                        ПЕРЕДЗВОНІТЬ МЕНІ
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 3333 -->
+<div class="overlay" id="modal-thanks" style="display: none">
+    <div class="modal-wrap">
+        <div class="close-modal">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal">
+            <img src="img/modal_ok.svg" alt="" class="modal-icon">
+            <div class="modal-title">
+                Дякуємо за
+                проявлений інтерес!
+            </div>
+            <div class="modal-descr">
+                Ми прямо зараз обробляємо Ваш
+                запит і відповімо найближчим
+                часом Пн-Пт 9: 00-20: 00
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 444 -->
+<div class="overlay" id="modal-down" style="display: none">
+    <div class="modal-wrap">
+        <div class="close-modal">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal">
+            <img src="img/down.svg" alt="" class="modal-icon">
+            <div class="modal-title">
+                Завантаження почалося ...
+            </div>
+            <div class="modal-descr">
+                Дочекайтеся закінчення, завантаження може
+                тривати кілька секунд
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- видео -->
+<div class="overlay" id="modal-video" style="display: none">
+    <div class="modal-video-wrap">
+        <div class="close-modal close-video">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal-video">
+
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/class.js"></script>
+
+</body>
+</html>
